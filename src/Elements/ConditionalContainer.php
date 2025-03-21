@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 
-#[AsContentElement('itsbessner_conditional_container', category: 'ITS Bessner', nestedFragments: true)]
+#[AsContentElement('itsbessner_conditional_container_element', category: 'ITS Bessner', nestedFragments: true)]
 class ConditionalContainer extends AbstractContentElementController
 {
 

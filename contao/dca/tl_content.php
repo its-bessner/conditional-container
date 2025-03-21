@@ -21,4 +21,4 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['itsbessner_conditional_days_before']
 ];
 
 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['itsbessner_conditional_container'] = '{type_legend},itsbessner_conditional_selection,itsbessner_conditional_days_before';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['itsbessner_conditional_container_element'] = '{type_legend},itsbessner_conditional_selection,itsbessner_conditional_days_before';
