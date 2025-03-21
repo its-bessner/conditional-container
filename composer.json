@@ -1,5 +1,5 @@
 {
-    "name": "itsbessner/conditional-container",
+    "name": "its-bessner/conditional-container",
     "type": "contao-bundle",
     "require": {
         "contao/core-bundle": "^5.3"

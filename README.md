@@ -17,7 +17,7 @@ Custom **Contao CMS** bundle that provides a conditional container element to di
 
 1. Install the bundle via Composer:
    ```bash
-   composer require itsbessner/conditional-container-bundle
+   composer require its-bessner/conditional-container-bundle
    ```
 
 2. Add the bundle to your **Contao CMS** project if not automatically registered.
