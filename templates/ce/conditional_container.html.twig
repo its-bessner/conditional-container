@@ -1,0 +1,17 @@
+{% if isBackend %}
+    Vorlauf: {{ daysBefore }},
+    Aktiv: {{ isValid  ? "ja" : "nein" }},
+    {% for option in options_selected %}
+        {{ options[option] }}: {{ fulfilled[option] ? "ja" : "nein" }}
+        {% if not loop.last %}
+            ,
+        {% endif %}
+    {% endfor %}
+{% else %}
+    {% if isValid %}
+        {% for fragment in fragments  %}
+            {{ content_element(fragment.id) }}
+        {% endfor %}
+    {% endif %}
+{% endif %}
+

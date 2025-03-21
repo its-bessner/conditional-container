@@ -1,0 +1,32 @@
+{
+    "name": "itsbessner/conditional-container",
+    "type": "contao-bundle",
+    "require": {
+        "contao/core-bundle": "^5.3"
+    },
+    "description": "",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Itsbessner\\ConditionalContainer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "IT Service Harald Beßner",
+            "email": "info@bessner-it.de"
+        }
+    ],
+    "minimum-stability": "stable",
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": true,
+            "php-http/discovery": true
+        }
+    },
+    "version": "1.1",
+    "extra": {
+        "contao-manager-plugin": "Itsbessner\\ConditionalContainer\\Manager"
+    }
+
+}
