@@ -24,7 +24,7 @@
             "php-http/discovery": true
         }
     },
-    "version": "1.1",
+    "version": "1.2",
     "extra": {
         "contao-manager-plugin": "Itsbessner\\ConditionalContainer\\Manager"
     }
