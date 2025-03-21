@@ -15,8 +15,8 @@ use Symfony\Component\HttpFoundation\Response;
 class ConditionalContainer extends AbstractContentElementController
 {
 
-    const OPTON_VALENTINE = 1;
-    const OPTON_EASTER = 2;
+    const OPTION_VALENTINE = 1;
+    const OPTION_EASTER = 2;
     const OPTION_XMAS = 3;
     const OPTION_MOTHERSDAY = 4;
 
@@ -35,11 +35,11 @@ class ConditionalContainer extends AbstractContentElementController
         ]);
     }
 
-    public static function getOptions()
+    public static function getOptions(): array
     {
         return [
-            self::OPTON_VALENTINE => "Valentinstag",
-            self::OPTON_EASTER => "Ostern",
+            self::OPTION_VALENTINE => "Valentinstag",
+            self::OPTION_EASTER => "Ostern",
             self::OPTION_XMAS => "Weihnachten",
             self::OPTION_MOTHERSDAY => "Muttertag"
         ];
@@ -64,14 +64,14 @@ class ConditionalContainer extends AbstractContentElementController
     public static function isConditionFulfilled($condition, $daysBefore): bool|array
     {
 
-        if ($condition == self::OPTON_VALENTINE) {
+        if ($condition == self::OPTION_VALENTINE) {
             $date = new DateTime("February 14th");
             $dateTo = $date->getTimestamp();
             $date->modify("-$daysBefore days");
             $dateFrom = $date->getTimestamp();
             return $dateFrom <= time() && time() <= $dateTo;
         }
-        if ($condition == self::OPTON_EASTER) {
+        if ($condition == self::OPTION_EASTER) {
             $date = new DateTime();
             $date->setTimestamp(easter_date());
             $date->modify("+2 days");
@@ -98,8 +98,8 @@ class ConditionalContainer extends AbstractContentElementController
         }
 
         return [
-            self::OPTON_VALENTINE => self::isConditionFulfilled(self::OPTON_VALENTINE, $daysBefore),
-            self::OPTON_EASTER => self::isConditionFulfilled(self::OPTON_EASTER, $daysBefore),
+            self::OPTION_VALENTINE => self::isConditionFulfilled(self::OPTION_VALENTINE, $daysBefore),
+            self::OPTION_EASTER => self::isConditionFulfilled(self::OPTION_EASTER, $daysBefore),
             self::OPTION_XMAS => self::isConditionFulfilled(self::OPTION_XMAS, $daysBefore),
             self::OPTION_MOTHERSDAY => self::isConditionFulfilled(self::OPTION_MOTHERSDAY, $daysBefore),
         ];
